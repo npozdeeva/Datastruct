@@ -18,8 +18,8 @@ class Stack:
     def to_next(self):
         return self.to_next()
 
-    def data(self):
-        return self.data()
+    # def data(self):
+    #     return self.data()
 
     def pop(self):
         remove = self.to_next

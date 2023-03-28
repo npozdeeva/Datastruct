@@ -5,23 +5,23 @@ class Node:
 
 class Stack:
     def __init__(self):
-        self.to_next = Node()
+        self.top = Node()
 
     def push(self, data):
         new_node = Node(data)
-        new_node.link_to_next = self.to_next
-        self.to_next = new_node
+        new_node.link_to_next = self.top
+        self.top = new_node
 
     def link_to_next(self):
         return self.link_to_next()
 
     def to_next(self):
-        return self.to_next()
+        return self.top()
 
     # def data(self):
     #     return self.data()
 
     def pop(self):
-        remove = self.to_next
-        self.to_next = self.to_next.link_to_next
+        remove = self.top
+        self.top = self.top.link_to_next
         return remove.data
